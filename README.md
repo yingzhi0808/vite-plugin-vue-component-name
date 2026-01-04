@@ -1,6 +1,6 @@
 [中文](./README.zh_CN.md) | **English**
 
-## vite-plugin-vue-component-name
+## vite-plugin-vue-define-options-name
 
 A Vite plugin that **automatically injects/fills `defineOptions({ name })` in Vue SFC `<script setup>`**, generating component names from the file path so components are easier to identify in Vue DevTools and debugging logs.
 
@@ -25,7 +25,7 @@ This means that in scenarios that rely on component names—such as **recursive 
 ### Install
 
 ```bash
-pnpm add -D vite-plugin-vue-component-name
+pnpm add -D vite-plugin-vue-define-options-name
 ```
 
 ### Usage
@@ -35,11 +35,11 @@ Use it in `vite.config.ts` (recommended to place it before `@vitejs/plugin-vue`)
 ```ts
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueComponentName from "vite-plugin-vue-component-name";
+import vueDefineOptionsName from "vite-plugin-vue-define-options-name";
 
 export default defineConfig({
   plugins: [
-    vueComponentName(),
+    vueDefineOptionsName(),
     vue(),
   ],
 });

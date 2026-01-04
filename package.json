@@ -1,5 +1,5 @@
 {
-  "name": "vite-plugin-vue-component-name",
+  "name": "vite-plugin-vue-define-options-name",
   "version": "1.0.0",
   "description": "A Vite plugin that injects/fills defineOptions({ name }) for Vue SFC <script setup> based on the file path.",
   "keywords": [
@@ -10,15 +10,15 @@
     "vite-plugin",
     "vue"
   ],
-  "homepage": "https://github.com/yingzhi0808/vite-plugin-vue-component-name",
+  "homepage": "https://github.com/yingzhi0808/vite-plugin-vue-define-options-name",
   "bugs": {
-    "url": "https://github.com/yingzhi0808/vite-plugin-vue-component-name/issues"
+    "url": "https://github.com/yingzhi0808/vite-plugin-vue-define-options-name/issues"
   },
   "license": "MIT",
   "author": "Yingzhi Ji <jiyingzhi0808@gmail.com>",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/yingzhi0808/vite-plugin-vue-component-name.git"
+    "url": "git+https://github.com/yingzhi0808/vite-plugin-vue-define-options-name.git"
   },
   "files": [
     "dist",

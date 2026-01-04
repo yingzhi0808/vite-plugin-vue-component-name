@@ -1,6 +1,6 @@
 [English](./README.md) | **简体中文**
 
-## vite-plugin-vue-component-name
+## vite-plugin-vue-define-options-name
 
 一个 Vite 插件：**自动为 Vue SFC 的 `<script setup>` 注入/补全 `defineOptions({ name })`**，组件名按文件路径生成，便于 Vue DevTools / 调试日志中识别组件。
 
@@ -25,7 +25,7 @@
 ### 安装
 
 ```bash
-pnpm add -D vite-plugin-vue-component-name
+pnpm add -D vite-plugin-vue-define-options-name
 ```
 
 ### 使用
@@ -35,11 +35,11 @@ pnpm add -D vite-plugin-vue-component-name
 ```ts
 import { defineConfig } from "vite";
 import vue from "@vitejs/plugin-vue";
-import vueComponentName from "vite-plugin-vue-component-name";
+import vueDefineOptionsName from "vite-plugin-vue-define-options-name";
 
 export default defineConfig({
   plugins: [
-    vueComponentName(),
+    vueDefineOptionsName(),
     vue(),
   ],
 });
