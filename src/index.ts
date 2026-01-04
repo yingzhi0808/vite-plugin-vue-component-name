@@ -160,8 +160,6 @@ function autoComponentName(options: AutoComponentNameOptions = {}): Plugin {
 
       if (!changed) return null;
 
-      console.log(ms.toString());
-
       return {
         code: ms.toString(),
         map: ms.generateMap({ hires: true, source: id }),
