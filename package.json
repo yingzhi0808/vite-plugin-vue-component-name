@@ -1,6 +1,6 @@
 {
   "name": "vite-plugin-vue-define-options-name",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Vite plugin that injects/fills defineOptions({ name }) for Vue SFC <script setup> based on the file path.",
   "keywords": [
     "component-name",
