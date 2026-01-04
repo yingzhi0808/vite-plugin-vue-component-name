@@ -1,0 +1,6 @@
+pre-commit:
+  jobs:
+    - run: pnpm oxlint --fix --type-aware {staged_files}
+      stage_fixed: true
+    - run: pnpm oxfmt --no-error-on-unmatched-pattern {staged_files}
+      stage_fixed: true

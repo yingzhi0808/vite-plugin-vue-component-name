@@ -1,0 +1,56 @@
+name: CI
+
+on:
+  push:
+    branches:
+      - "**"
+  pull_request:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ${{ matrix.os }}
+    if: "!contains(github.event.head_commit.message, 'chore: release')"
+
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+        node_version: [lts/*, latest]
+      fail-fast: false
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Install pnpm
+        uses: pnpm/action-setup@v4
+
+      - name: Setup Node ${{ matrix.node_version }}
+        uses: actions/setup-node@v4
+        with:
+          node-version: ${{ matrix.node_version }}
+          cache: pnpm
+
+      - name: Install dependencies
+        run: pnpm install
+
+      - name: Run Oxlint
+        run: pnpm oxlint --type-aware
+        if: runner.os == 'Linux' && matrix.node_version == 'latest'
+
+      - name: Run Oxfmt
+        run: pnpm oxfmt --check
+        if: runner.os == 'Linux' && matrix.node_version == 'latest'
+
+      - name: Type check
+        run: pnpm check:type
+        if: runner.os == 'Linux' && matrix.node_version == 'latest'
+
+      - name: Build
+        run: pnpm build
+        if: runner.os == 'Linux' && matrix.node_version == 'latest'
+
+      - name: Release
+        run: pnpx pkg-pr-new publish --compact
+        if: runner.os == 'Linux' && matrix.node_version == 'latest'

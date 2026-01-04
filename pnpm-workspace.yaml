@@ -1,0 +1,10 @@
+ignoredBuiltDependencies:
+  - "@scarf/scarf"
+  - "@tree-sitter-grammars/tree-sitter-yaml"
+  - core-js-pure
+  - esbuild
+  - tree-sitter
+  - tree-sitter-json
+onlyBuiltDependencies:
+  - lefthook
+enable-global-virtual-store: true

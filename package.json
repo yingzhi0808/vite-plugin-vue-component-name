@@ -1,0 +1,79 @@
+{
+  "name": "vite-plugin-vue-component-name",
+  "version": "0.0.0",
+  "description": "A Vite plugin that injects/fills defineOptions({ name }) for Vue SFC <script setup> based on the file path.",
+  "keywords": [
+    "vite-plugin",
+    "vue",
+    "sfc",
+    "script-setup",
+    "defineOptions",
+    "component-name"
+  ],
+  "homepage": "https://github.com/yingzhi0808/vite-plugin-vue-component-name",
+  "bugs": {
+    "url": "https://github.com/yingzhi0808/vite-plugin-vue-component-name/issues"
+  },
+  "license": "MIT",
+  "author": "Yingzhi Ji <jiyingzhi0808@gmail.com>",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yingzhi0808/vite-plugin-vue-component-name.git"
+  },
+  "files": [
+    "dist",
+    "LICENSE",
+    "README.md",
+    "README.zh_CN.md"
+  ],
+  "type": "module",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.mts",
+      "import": "./dist/index.mjs",
+      "require": "./dist/index.mjs"
+    }
+  },
+  "publishConfig": {
+    "access": "public"
+  },
+  "scripts": {
+    "build": "tsdown",
+    "check": "run-p check:*",
+    "check:type": "tsc --noEmit",
+    "check:oxlint": "oxlint --fix --type-aware",
+    "check:oxfmt": "oxfmt",
+    "preinstall": "npx only-allow pnpm",
+    "postinstall": "lefthook install"
+  },
+  "dependencies": {
+    "@vue/compiler-sfc": "^3.5.26",
+    "magic-string": "^0.30.21",
+    "oxc-parser": "^0.106.0",
+    "radashi": "^12.7.1"
+  },
+  "devDependencies": {
+    "@types/node": "^25.0.3",
+    "lefthook": "^2.0.13",
+    "npm-run-all2": "^8.0.4",
+    "oxfmt": "^0.21.0",
+    "oxlint": "^1.36.0",
+    "oxlint-tsgolint": "^0.10.1",
+    "tsdown": "^0.18.4",
+    "typescript": "^5.9.3"
+  },
+  "peerDependencies": {
+    "vite": ">=7.0.0"
+  },
+  "devEngines": {
+    "runtime": {
+      "name": "node",
+      "version": "^22.0.0",
+      "onFail": "download"
+    }
+  },
+  "engines": {
+    "node": ">=18.19.0"
+  },
+  "packageManager": "pnpm@10.27.0"
+}

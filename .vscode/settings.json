@@ -1,0 +1,13 @@
+{
+  "editor.codeActionsOnSave": {
+    "source.fixAll.oxc": "explicit",
+    "source.organizeImports": "explicit"
+  },
+  "editor.formatOnSave": true,
+  "oxc.unusedDisableDirectives": "deny",
+  "oxc.typeAware": true,
+  "editor.defaultFormatter": "oxc.oxc-vscode",
+  "prettier.enable": false,
+  "eslint.enable": false,
+  "typescript.tsdk": "node_modules/typescript/lib"
+}
