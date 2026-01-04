@@ -65,8 +65,10 @@ export type AutoComponentNameOptions = {
 ### Naming rules
 
 Given a file path `.../FooBar.vue`:
+
 - Uses the filename (without `.vue`) as the base name: `FooBar`
 - Transforms it using `nameCase`, and uses it as the component `name`
 
 Special case for `index.vue`:
+
 - `.../profile/index.vue` → base name uses the directory name `profile` → e.g. `Profile` in pascal case

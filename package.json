@@ -3,12 +3,12 @@
   "version": "0.0.0",
   "description": "A Vite plugin that injects/fills defineOptions({ name }) for Vue SFC <script setup> based on the file path.",
   "keywords": [
-    "vite-plugin",
-    "vue",
-    "sfc",
-    "script-setup",
+    "component-name",
     "defineOptions",
-    "component-name"
+    "script-setup",
+    "sfc",
+    "vite-plugin",
+    "vue"
   ],
   "homepage": "https://github.com/yingzhi0808/vite-plugin-vue-component-name",
   "bugs": {

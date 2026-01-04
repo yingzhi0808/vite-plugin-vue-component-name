@@ -65,10 +65,10 @@ export type AutoComponentNameOptions = {
 ### 组件名生成规则
 
 给定文件路径 `.../FooBar.vue`：
+
 - 取文件名（去掉 `.vue`）作为基础名：`FooBar`
 - 再按 `nameCase` 转换后作为组件 `name`
 
 `index.vue` 是特殊情况：
+
 - `.../profile/index.vue` → 基础名取目录名 `profile` → 例如 pascal 后为 `Profile`
-
-
